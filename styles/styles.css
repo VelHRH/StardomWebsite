@@ -1,0 +1,27 @@
+body{
+    background-color: rgba(212, 232, 249, 0.918);
+    font-family: Trebuchet MS, Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    color:rgba(0, 78, 147, 0.918);
+    
+}
+
+nav a{
+    padding: 5px 20px;
+    margin: 10px;
+    text-decoration: none;
+    color:white;
+    border-radius: 5px;
+    background-color: rgba(0, 78, 147, 0.918);
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+nav a:hover{
+    opacity: 1;
+}
