@@ -48,8 +48,15 @@
      }
      asort($final);
      $final2 = array_reverse($final);
+     $i = 0;
      foreach ($final2 as $kkk => $vvv){
-        echo "$kkk - $vvv"; ?> <br> <?php
+        $i++;
+        if ($i<11){
+            ?>
+            <span style="font-size:40px"><?php echo "$i. $kkk - $vvv"; ?></span>
+            <?php
+        } else {echo "$i. $kkk - $vvv";}
+        ?> <br> <?php
     }
     ?>
 </body>
