@@ -13,7 +13,7 @@
     
     $wrestlers = array();
     $mysql = new mysqli('localhost', 'root', '', 'betdb');
-    $result = $mysql->query("SELECT * FROM `stardom`");
+    $result = $mysql->query("SELECT * FROM `stardom` order by `Рейтинг` desc");
     $i=0;
     while ($match = $result->fetch_assoc()){
         $i++;
