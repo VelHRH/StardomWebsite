@@ -7,28 +7,6 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Top Matches</title>
 </head>
-<style>
-    table{
-        display: flex;
-        justify-content: center;
-        border-collapse:separate; 
-        border-spacing: 0.5em 0.5em;
-    }
-table th, td {
-    padding:.25em .5em;
-    text-align:left;
-    border-radius: 10px;
-    margin: 10px;
-  }
-  td {
-    background-color:#eee; 
-       
-  }
-  th {
-    background-color:#009;
-    color:#fff;
-  }
-</style>
 <body>
     <?php
     require_once 'header.php';
