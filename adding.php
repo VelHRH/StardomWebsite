@@ -17,7 +17,7 @@
         <label for="show">Шоу:</label><br>
         <input type="text" id="show" name="show"><br>
         <label for="year">Год шоу:</label><br>
-        <input type="number" min="2011" max="2023" step="1"/><br>
+        <input type="number" min="2011" max="2023" step="1" name="year"/><br>
         <label for="rating">Рейтинг:</label><br>
         <select name="rating" id="rating">
             <option value="None" selected>Choose</option>
@@ -28,7 +28,7 @@
             <option value="4">4</option>
             <option value="3.75">3.75</option>
         </select><br><br>
-        <input type="submit" value="Send">
+        <button type="submit">Send</button>
     </form>
 </body>
 </html>
