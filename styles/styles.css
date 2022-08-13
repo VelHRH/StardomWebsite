@@ -10,11 +10,14 @@ nav{
     color:rgba(0, 78, 147, 0.918);
     
 }
+a{
+    text-decoration: none;
+    background-color: greenyellow;
+}
 
 nav a{
     padding: 5px 20px;
     margin: 10px;
-    text-decoration: none;
     color:white;
     border-radius: 5px;
     background-color: rgba(0, 78, 147, 0.918);
@@ -25,3 +28,17 @@ nav a{
 nav a:hover{
     opacity: 1;
 }
+
+
+table th, td {
+    padding:.25em .5em;
+    text-align:left;
+  }
+  td {
+    background-color:#eee;    
+  }
+  th {
+    background-color:#009;
+    color:#fff;
+  }
+  
