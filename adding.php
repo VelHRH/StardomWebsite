@@ -7,10 +7,45 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Top Matches</title>
 </head>
+<style>
+    .fo{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    form{
+        font-size:20px;
+        width: 300px;
+    }
+    input, select{
+        font-size:20px;
+        border:none;
+        margin-bottom: 20px;
+        width: 300px;
+        height: 1.5em;
+        border-radius: 5px;
+    }
+    button{
+        font-family: Trebuchet MS, Verdana, Geneva, Tahoma, sans-serif;
+        width: 100%;
+        border-radius: 5px;
+        background-color: rgba(0, 78, 147, 0.918);
+        opacity: 0.5;
+        color:#fff;
+        border: none;
+        font-size:20px;
+        height: 2em;
+        transition: .5s;
+    }
+    button:hover{
+        opacity: 1;
+    }
+</style>
 <body>
     <?php
     require_once 'header.php';
     ?>
+    <div class="fo">
     <form action="addhandle.php" method="post">
         <label for="mname">Матч:</label><br>
         <input type="text" id="mname" name="mname"><br>
@@ -29,6 +64,6 @@
             <option value="3.75">3.75</option>
         </select><br><br>
         <button type="submit">Send</button>
-    </form>
+    </form></div>
 </body>
 </html>
