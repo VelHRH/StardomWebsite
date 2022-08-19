@@ -31,6 +31,7 @@ nav a:hover{
 
 table{
     display: flex;
+    width: 100%;
     justify-content: center;
     border-collapse:separate; 
     border-spacing: 0.5em 0.5em;
@@ -53,6 +54,42 @@ color:#fff;
 *{margin:0; padding:0;}
 nav a{cursor: pointer;}
 .imgmenu {height: 80px; border-radius: 10px; padding: 5px;}
-.imgmenu:hover {background: #eee; transition: .5s;}
+.imgmenu:hover {background: #eee; transition: .5s; filter: blur(2px);}
 #slidebar {left: -100%; background: rgba(0, 78, 147, 0.918); position: absolute; width: 100%; opacity: 0; transition: .5s}
 #slidebar.active {opacity: 1; left:0;}
+
+#slidebarr {left: -100%; background: rgba(0, 78, 147, 0.918); position: absolute; width: 100%; opacity: 0; transition: .5s}
+#slidebarr.active {opacity: 1; left:0;}
+#gp2022 {
+  position: absolute;
+  font-size: 40px;
+  top: 50%;
+  left: 75px;
+  transform: translate(-50%, -50%);
+  color:white;
+  opacity:0;
+}
+.imgmenu:hover:hover ~ #gp2022{
+        opacity:1;
+        transition: .5s;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-areas: "A B"
+                         "C B";
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .box1{
+      grid-area: A;
+  }
+  .box2{
+      grid-area: B;
+      height: 92vh;
+      overflow:scroll;
+  }
+  .box3{
+      grid-area: C;
+  }

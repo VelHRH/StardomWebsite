@@ -12,7 +12,7 @@
     require_once 'header.php';
     
     $wrestlers = array();
-    $mysql = new mysqli('localhost', 'root', '', 'betdb');
+    $mysql = new mysqli('localhost', 'root', '', 'stardom');
     $result = $mysql->query("SELECT * FROM `stardom` order by `Рейтинг` desc");
     ?>
     <table>

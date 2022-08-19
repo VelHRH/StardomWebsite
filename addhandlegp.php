@@ -10,8 +10,8 @@
     }
     else{
         $mysql = new mysqli('localhost', 'root', '', 'stardom');
-        $result = $mysql->query("INSERT INTO `stardom`(`Матч`, `Шоу`, `Год`, `Рейтинг`) VALUES ('$match','$show','$year','$rating')");
+        $result = $mysql->query("INSERT INTO `5stargp`(`Рестлер1`, `Рестлер2`, `Год`, `Рейтинг`) VALUES ('$match','$show','$year','$rating')");
         $mysql->close();
-        header('Location: matches.php');
+        header('Location: gp2022.php');
     }
 ?>

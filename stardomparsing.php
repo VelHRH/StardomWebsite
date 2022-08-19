@@ -18,7 +18,7 @@
     }
     
     $wrestlers = array();
-    $mysql = new mysqli('localhost', 'root', '', 'betdb');
+    $mysql = new mysqli('localhost', 'root', '', 'stardom');
     $result = $mysql->query("SELECT `Матч` FROM `stardom`");
     while ($user = $result->fetch_assoc()){
         foreach ($user as $k => $v){
@@ -51,7 +51,7 @@
      $i = 0;
      foreach ($final2 as $kkk => $vvv){
         $i++;
-        if ($i<11){
+        if ($i<4){
             ?>
             <span style="font-size:40px"><?php echo "$i. $kkk - $vvv"; ?></span>
             <?php
