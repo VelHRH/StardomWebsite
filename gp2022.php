@@ -8,30 +8,6 @@
     <title>Top Wrestlers</title>
 </head>
 <style>
-    .wrapper {
-  display: grid;
-  grid-template-areas: "A B"
-                       "C B";
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-.box1{
-    grid-area: A;
-}
-.box2{
-    grid-area: B;
-    height: 92vh;
-    overflow:scroll;
-}
-.box3{
-    grid-area: C;
-}
-
-
-
-
-
 .fo{
         margin-top: 20px;
         display: flex;
@@ -63,8 +39,32 @@
     button:hover{
         opacity: 1;
     }
-    div {
+
+.wrapper {
+    display: grid;
+    grid-template-areas: "A B"
+                         "C B";
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .box1{
+      grid-area: A;
+  }
+  .box2{
+      grid-area: B;
+      height: 92vh;
+      overflow:scroll;
+  }
+  .box3{
+      grid-area: C;
+      display: flex;
+      height: 57vh;
+      overflow:scroll;
+  }
+  .part{
     display: inline-block;
+  }
+  img  {
+   height: 50vh;
 }
 
 
@@ -77,13 +77,13 @@
         <div class="box1">
         <div class="fo">
     <form action="addhandlegp.php" method="post">
-    <div>
+    <div class = "part">
         <label for="mname">Рестлер 1:</label><br>
         <input type="text" id="mname" name="mname"><br>
         <label for="show">Рестлер 2:</label><br>
         <input type="text" id="show" name="show"><br>
     </div>
-    <div>
+    <div class = "part">
         <label for="year">Год:</label><br>
         <input type="number" min="2011" max="2023" step="1" name="year" value="2022"/><br>
         <label for="rating">Рейтинг:</label><br>
@@ -123,7 +123,6 @@
         <th>Rating</th>
     </tr>
     <?php
-    $wrestlers = array();
     $mysql = new mysqli('localhost', 'root', '', 'stardom');
     $result = $mysql->query("SELECT `Рестлер1`, `Рестлер2`, `Рейтинг` FROM `5stargp` ORDER BY `Рейтинг` desc");
     $schet = 0;
@@ -199,7 +198,56 @@
     ?>
     </table>
         </div>
-        <div class="box3">C</div>
+        <div class="box3">
+            <?php
+            $res = $mysql->query("SELECT `Рестлер1` FROM `5stargp` ORDER BY `Рейтинг` desc");
+            $wrsetlers = array();
+            while ($match = $res->fetch_assoc()){
+                $i = $match['Рестлер1'];
+                $kontrol = 0;
+                foreach ($wrsetlers as $k => $v){
+                    if ($v==$i){
+                        $kontrol++;
+                        break;
+                    }
+                }
+                if($kontrol==0){
+                    $wrsetlers[] = $i;
+                }
+            }
+            $res = $mysql->query("SELECT `Рестлер2` FROM `5stargp` ORDER BY `Рейтинг` desc");
+            while ($match = $res->fetch_assoc()){
+                $i = $match['Рестлер2'];
+                $kontrol = 0;
+                foreach ($wrsetlers as $k => $v){
+                    if ($v==$i){
+                        $kontrol++;
+                        break;
+                    }
+                }
+                if($kontrol==0){
+                    $wrsetlers[] = $i;
+                }
+            }
+            $w = array();
+            foreach ($wrsetlers as $k => $v){
+                $res = $mysql->query("SELECT AVG(`Рейтинг`) AS `avg` FROM `5stargp` WHERE `Рестлер1`='$v' or `Рестлер2`='$v'");
+                $m = $res->fetch_assoc();
+                $okr = $m['avg'];
+                $okr = round($okr, 2);
+                $w[$v]=$okr;
+            }
+            arsort($w);
+            foreach ($w as $k => $v){
+                $st = $k;
+                $n = str_replace(" ", "", $st);
+                $n = "./img/" . $n . ".png";
+            ?>
+            <div class="inline-block"><img src="<?php echo $n; ?>" alt="<?php echo $st; ?>"><div style="text-align: center; font-size: 24px; color: rgba(0, 109, 204, 0.918);"><?php echo $v ?></div></div>
+            <?php
+            }
+            ?>
+        </div>
     </div>
 </body>
 </html>

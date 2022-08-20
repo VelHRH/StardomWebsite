@@ -5,6 +5,19 @@
     $year = filter_var(trim($_POST['year']), FILTER_SANITIZE_STRING);
     $rating = filter_var(trim($_POST['rating']), FILTER_SANITIZE_STRING);
     
+
+
+
+
+
+
+
+    
+
+
+
+
+
     if (($match=="") || ($show=="") || ($year=="") || ($rating=="None")){
         echo "Uncorrect input!";
     }

@@ -31,7 +31,6 @@ nav a:hover{
 
 table{
     display: flex;
-    width: 100%;
     justify-content: center;
     border-collapse:separate; 
     border-spacing: 0.5em 0.5em;
@@ -73,23 +72,3 @@ nav a{cursor: pointer;}
         opacity:1;
         transition: .5s;
 }
-
-
-.wrapper {
-    display: grid;
-    grid-template-areas: "A B"
-                         "C B";
-    grid-gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .box1{
-      grid-area: A;
-  }
-  .box2{
-      grid-area: B;
-      height: 92vh;
-      overflow:scroll;
-  }
-  .box3{
-      grid-area: C;
-  }
