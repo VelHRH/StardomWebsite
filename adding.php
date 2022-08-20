@@ -7,22 +7,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Top Matches</title>
 </head>
-<script>
-    let promise = new Promise(function(resolve, reject) {
 
-setTimeout(() => console.log("done!"), 1000);
-
-});
-
-
-promise.then(
-
-result => alert(result), 
-
-error => alert(error) 
-
-);
-</script>
 <style>
     .fo{
         margin-top: 20px;
