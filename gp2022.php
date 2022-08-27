@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Top Wrestlers</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <title>5STAR Grand Prix</title>
 </head>
 <style>
 .fo{
@@ -67,6 +68,14 @@
    height: 50vh;
 }
 
+.fa-times{
+    color: red;
+    opacity: 0.3;
+}
+
+.fa-times:hover{
+    opacity: 1;
+}
 
 </style>
 <body>
@@ -136,6 +145,7 @@
         <tr> 
             <td><a href="#"><?php echo "$schet. $i vs. $i2"; ?></a></td>
             <td style="background-color: rgb(0, 81, 0); color: white;"><?php echo $j; ?></td>
+            <td style="background-color: rgba(212, 232, 249, 0.918);"><a href="deletehandle.php?w1=<?php echo $i ?>&w2=<?php echo $i2 ?>" class="fa fa-times"></a></td>
         </tr>
         
         <?php
@@ -145,6 +155,7 @@
             <tr> 
                 <td><a href="#"><?php echo "$schet. $i vs. $i2"; ?></a></td>
                 <td style="background-color: rgb(0, 111, 0); color: white;"><?php echo $j; ?></td>
+                <td style="background-color: rgba(212, 232, 249, 0.918);"><a href="deletehandle.php?w1=<?php echo $i ?>&w2=<?php echo $i2 ?>" class="fa fa-times"></a></td>
             </tr>
             
             <?php
@@ -154,6 +165,7 @@
             <tr> 
                 <td><a href="#"><?php echo "$schet. $i vs. $i2"; ?></a></td>
                 <td style="background-color: rgb(0, 141, 0); color: white;"><?php echo $j; ?></td>
+                <td style="background-color: rgba(212, 232, 249, 0.918);"><a href="deletehandle.php?w1=<?php echo $i ?>&w2=<?php echo $i2 ?>" class="fa fa-times"></a></td>
             </tr>
             
             <?php
@@ -163,6 +175,7 @@
             <tr> 
                 <td><a href="#"><?php echo "$schet. $i vs. $i2"; ?></a></td>
                 <td style="background-color: rgb(0, 171, 0); color: white;"><?php echo $j; ?></td>
+                <td style="background-color: rgba(212, 232, 249, 0.918);"><a href="deletehandle.php?w1=<?php echo $i ?>&w2=<?php echo $i2 ?>" class="fa fa-times"></a></td>
             </tr>
             
             <?php
@@ -172,6 +185,7 @@
             <tr> 
                 <td><a href="#"><?php echo "$schet. $i vs. $i2"; ?></a></td>
                 <td style="background-color: rgb(0, 201, 0); color: white;"><?php echo $j; ?></td>
+                <td style="background-color: rgba(212, 232, 249, 0.918);"><a href="deletehandle.php?w1=<?php echo $i ?>&w2=<?php echo $i2 ?>" class="fa fa-times"></a></td>
             </tr>
             
             <?php
@@ -181,6 +195,7 @@
             <tr> 
                 <td><a href="#"><?php echo "$schet. $i vs. $i2"; ?></a></td>
                 <td style="background-color: rgb(0, 231, 0); color: white;"><?php echo $j; ?></td>
+                <td style="background-color: rgba(212, 232, 249, 0.918);"><a href="deletehandle.php?w1=<?php echo $i ?>&w2=<?php echo $i2 ?>" class="fa fa-times"></a></td>
             </tr>
             
             <?php
@@ -190,6 +205,7 @@
             <tr> 
                 <td><a href="#"><?php echo "$schet. $i vs. $i2"; ?></a></td>
                 <td style="background-color: #eee; color: rgba(0, 109, 204, 0.918);"><?php echo $j; ?></td>
+                <td style="background-color: rgba(212, 232, 249, 0.918);"><a href="deletehandle.php?w1=<?php echo $i ?>&w2=<?php echo $i2 ?>" class="fa fa-times"></a></td>
             </tr>
             
             <?php
