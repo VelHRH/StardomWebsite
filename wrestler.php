@@ -14,6 +14,17 @@
     $wrestlers = array();
     $mysql = new mysqli('localhost', 'root', '', 'stardom');
     $result = $mysql->query("SELECT * FROM `stardom` WHERE `Матч` LIKE '%$w%' order by `Рейтинг` desc");
+    $rows = array();
+    while($row = $result->fetch_assoc())
+    {
+        $rows[] = $row;
+    }
+    if (sizeof($rows)==0){
+        $result = $mysql->query("SELECT * FROM `AJW` WHERE `Матч` LIKE '%$w%' order by `Рейтинг` desc");
+    } 
+    else{
+        $result = $mysql->query("SELECT * FROM `stardom` WHERE `Матч` LIKE '%$w%' order by `Рейтинг` desc");
+    }
     ?>
     <table>
     <tr>
