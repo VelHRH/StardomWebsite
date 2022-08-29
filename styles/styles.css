@@ -61,7 +61,7 @@ nav a{cursor: pointer;}
 #slidebarr.active {opacity: 1; left:0;}
 #gp2022 {
   position: absolute;
-  font-size: 40px;
+  font-size: 20px;
   top: 50%;
   left: 75px;
   transform: translate(-50%, -50%);
