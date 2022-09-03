@@ -54,12 +54,13 @@ color:#fff;
 nav a{cursor: pointer;}
 .imgmenu {height: 80px; border-radius: 10px; padding: 5px;}
 .imgmenu:hover {background: #eee; transition: .5s; filter: blur(2px);}
-#slidebar {left: -100%; background: rgba(0, 78, 147, 0.918); position: absolute; width: 100%; opacity: 0; transition: .5s}
+#slidebar {z-index: 11;left: -100%; background: rgba(0, 78, 147, 0.918); position: absolute; width: 100%; opacity: 0; transition: .5s}
 #slidebar.active {opacity: 1; left:0;}
 
-#slidebarr {left: -100%; background: rgba(0, 78, 147, 0.918); position: absolute; width: 100%; opacity: 0; transition: .5s}
+#slidebarr {z-index: 10; left: -100%; background: rgba(0, 78, 147, 0.918); position: absolute; width: 100%; opacity: 0; transition: .5s}
 #slidebarr.active {opacity: 1; left:0;}
 #gp2022 {
+    z-index: -1;
   position: absolute;
   font-size: 20px;
   top: 50%;
@@ -69,6 +70,7 @@ nav a{cursor: pointer;}
   opacity:0;
 }
 .imgmenu:hover:hover ~ #gp2022{
+        z-index: 1;
         opacity:1;
         transition: .5s;
 }

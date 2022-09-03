@@ -9,6 +9,7 @@
     <style>
         img.profile{
             width: 200px;
+            z-index: -1;
             height: 200px;
             object-fit: cover;
             object-position: 0 0;
@@ -31,6 +32,7 @@
             position: relative;
         }
         .col {
+            z-index: -1;
             position: absolute;
   font-size: 35px;
   top: 50%;
@@ -40,6 +42,7 @@
   opacity:0;
 }
 img.profile:hover ~ .col{
+    z-index: 1;
     text-shadow: 0 0 5px black;
     transition: 0.5;
     opacity:1;

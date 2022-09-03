@@ -8,10 +8,7 @@
 </nav>
 
 <style>
-        .imgmenu {height: 80px; border-radius: 10px; padding: 5px;}
-.imgmenu:hover {background: #eee; transition: .5s; filter: blur(2px);}
-#slidebarr {left: -100%; background: rgba(0, 78, 147, 0.918); position: absolute; width: 100%; opacity: 0; transition: .5s}
-#slidebarr.active {opacity: 1; left:0;}
+
 </style>
 <div id="slidebar">
         <a href="./matches.php"><img class="imgmenu" src="https://www.pwtorch.com/site/wp-content/uploads/post/2019/06/world-wonder-ring-stardom.png" alt="Stardom"></a>
