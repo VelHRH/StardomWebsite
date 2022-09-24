@@ -37,6 +37,7 @@
         font-size:20px;
         height: 2em;
         transition: .5s;
+        cursor: pointer;
     }
     button:hover{
         opacity: 1;
